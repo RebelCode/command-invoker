@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b469a0e916cca1de52838363001040bc",
-    "packages": [],
+    "content-hash": "631b0419477d311192e59ef111c0e1ec",
+    "packages": [
+        {
+            "name": "dhii/invoker-interface",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/invoker-interface.git",
+                "reference": "076e0e709d75f18eef48e1ec8ff720f6a0d3e32c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/invoker-interface/zipball/076e0e709d75f18eef48e1ec8ff720f6a0d3e32c",
+                "reference": "076e0e709d75f18eef48e1ec8ff720f6a0d3e32c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 | ^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
+                "dhii/php-cs-fixer-config": "^0.1",
+                "phpunit/phpunit": "^4.8",
+                "ptrofimov/xpmock": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Invocation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
+                }
+            ],
+            "description": "Interfaces for command invocation",
+            "time": "2017-10-21 15:59:44"
+        }
+    ],
     "packages-dev": [
         {
             "name": "codeclimate/php-test-reporter",
@@ -2018,7 +2061,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "dhii/invoker-interface": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
