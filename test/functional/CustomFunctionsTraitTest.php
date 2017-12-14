@@ -3,7 +3,7 @@
 namespace RebelCode\CommandInvoker\FuncTest;
 
 use Xpmock\TestCase;
-use Dhii\Output\CustomFunctionsTrait as TestSubject;
+use RebelCode\CommandInvoker\CustomFunctionsTrait as TestSubject;
 use Dhii\Util\String\StringableInterface as Stringable;
 use PHPUnit_Framework_MockObject_MockObject;
 use InvalidArgumentException;
