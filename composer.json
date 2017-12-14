@@ -1,5 +1,5 @@
 {
-    "name": "rebelcode/command-invoker",
+    "name": "rebelcode/command-invoker-abstract",
     "description": "An invoker of commands",
     "type": "library",
     "license": "MIT",
