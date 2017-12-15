@@ -32,16 +32,10 @@ trait CustomFunctionsTrait
      *
      * @param string|Stringable $code     The code to register the function with.
      * @param callable          $function The function to register.
-     *
-     * @throws InvalidArgumentException If function is not a callable.
      */
-    protected function _registerCustomFunction($code, $function)
+    protected function _registerCustomFunction($code, callable $function)
     {
         $code = $this->_normalizeFunctionCode($code);
-
-        if (!is_callable($function, true)) {
-            throw $this->_createInvalidArgumentException($this->__('Function being registered with code "%1$s" must be a callable', $code), null, null, $function);
-        }
 
         $this->customFunctions[$code] = $function;
     }

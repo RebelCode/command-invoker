@@ -142,24 +142,6 @@ class CustomFunctionsTraitTest extends TestCase
     }
 
     /**
-     * Tests that `_registerCustomFunction()` method fails as expected when given an invalid function.
-     *
-     * @since [*next-version*]
-     */
-    public function testRegisterCustomFunctionFailureNotCallable()
-    {
-        $code = uniqid('string-');
-        $stringable = $this->createStringable($code);
-        $command = rand(1, 99);
-        $subject = $this->createInstance();
-
-        $this->setExpectedException('InvalidArgumentException');
-        $_subject = $this->reflect($subject);
-
-        $_subject->_registerCustomFunction($stringable, $command);
-    }
-
-    /**
      * Tests that `_registerCustomFunctions()` method works as expected.
      *
      * @since [*next-version*]
