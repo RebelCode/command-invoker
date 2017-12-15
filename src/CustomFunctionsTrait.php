@@ -97,19 +97,14 @@ trait CustomFunctionsTrait
      * @param array             $args The arguments to pass to the function.
      *
      * @throws DomainException          If the function is not callable
-     * @throws InvalidArgumentException If the list of arguments or the function
-     *                                  code is illegal.
+     * @throws InvalidArgumentException If the  function code is illegal.
      * @throws OutOfRangeException      If no function with the specified code is defined.
      * @throws DomainException          If the function is not callable.
      *
      * @return mixed The result of the function call.
      */
-    protected function _callCustomFunction($code, $args = [])
+    protected function _callCustomFunction($code, array $args = [])
     {
-        if (!is_array($args)) {
-            throw $this->_createInvalidArgumentException($this->__('Argument list must be an array'), null, null, $args);
-        }
-
         $code     = $this->_normalizeFunctionCode($code);
         $function = $this->_getCustomFunction($code);
 

@@ -284,20 +284,6 @@ class CustomFunctionsTraitTest extends TestCase
     }
 
     /**
-     * Tests that the `_callCustomFunction()` method fails correctly when given invalid function arguments.
-     *
-     * @since [*next-version*]
-     */
-    public function testCallCustomFunctionFailureInvalidArgs()
-    {
-        $subject = $this->createInstance();
-        $_subject = $this->reflect($subject);
-
-        $this->setExpectedException('InvalidArgumentException');
-        $_subject->_callCustomFunction(uniqid(), uniqid());
-    }
-
-    /**
      * Tests that the `_callCustomFunction()` method fails correctly when custom function is not callable.
      *
      * @since [*next-version*]
